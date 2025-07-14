@@ -1,19 +1,15 @@
-// 📊 Barra de progreso
 function actualizarProgreso() {
   const casillas = document.querySelectorAll('input[type="checkbox"]');
   const total = casillas.length;
   let marcadas = 0;
-
   casillas.forEach(c => {
     if (c.checked) marcadas++;
   });
-
   const porcentaje = Math.round((marcadas / total) * 100);
   document.getElementById('barraProgreso').style.width = porcentaje + '%';
   document.getElementById('porcentajeProgreso').textContent = porcentaje + '% cursado';
 }
 
-// 🔓 Desbloqueo por requisito
 function desbloquear(ids) {
   ids.forEach(function(id) {
     const materia = document.getElementById(id);
@@ -29,7 +25,6 @@ function desbloquear(ids) {
   });
 }
 
-// 🎨 Asigna color por área
 function getColorPorClase(clase) {
   if (clase.includes('finanzas')) return '#c9b89a';
   if (clase.includes('alimentos')) return '#97cfa3';
