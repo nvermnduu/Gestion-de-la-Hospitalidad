@@ -96,3 +96,33 @@ footer {
   font-size: 15px;
   color: #6a4e42;
 }
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+    font-size: 15px;
+  }
+
+  .progreso-container {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .trimestre {
+    padding: 12px;
+    margin-bottom: 18px;
+  }
+
+  .asignatura {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  footer {
+    font-size: 13px;
+    margin-top: 30px;
+  }
+}
