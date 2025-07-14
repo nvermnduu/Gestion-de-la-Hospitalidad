@@ -1,45 +1,62 @@
 body {
   font-family: 'Georgia', serif;
-  background: #fdf8f3 url('https://i.imgur.com/EJKZSYE.png') top left repeat;
+  background: #fdf8f3 url('https://i.imgur.com/EJKZSYE.png') repeat;
   color: #5c4b3c;
   padding: 30px;
 }
 
 h1 {
   text-align: center;
-  color: #7b5e4c;
-  font-size: 28px;
-  margin-bottom: 40px;
-  text-shadow: 1px 1px #e9d3c0;
-}
-
-h2 {
-  font-size: 20px;
+  font-size: 32px;
   color: #6a4e42;
   margin-bottom: 10px;
+}
+
+.frase {
+  text-align: center;
+  font-style: italic;
+  color: #7b5e4c;
+  margin-bottom: 20px;
+}
+
+.progreso-container {
+  background: #e8d8c4;
+  border: 1px solid #c7b299;
+  border-radius: 10px;
+  padding: 8px;
+  margin: 0 auto 30px;
+  width: 300px;
+  text-align: center;
+}
+
+.progreso-barra {
+  height: 12px;
+  width: 0%;
+  background: #a98b6a;
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+#porcentajeProgreso {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
 }
 
 .trimestre {
   background: #fffdf8;
   border: 2px solid #decbb5;
-  box-shadow: 2px 2px 8px rgba(153, 119, 96, 0.2);
   border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 30px;
+  padding: 16px;
+  margin-bottom: 20px;
 }
 
 .asignatura {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
   background: #f8f3ed;
   border-left: 6px solid #c0a98f;
-  padding: 10px 15px;
   border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.bloqueada {
-  opacity: 0.5;
-  cursor: not-allowed;
-  background: #eae3dc;
-  border-left-color: #bfb0a1;
-  color: #8a7463;
+  font-size: 16px;
 }
