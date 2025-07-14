@@ -1,39 +1,45 @@
 body {
-  font-family: sans-serif;
-  background: #fffaf0;
-  padding: 20px;
+  font-family: 'Georgia', serif;
+  background: #fdf8f3 url('https://i.imgur.com/EJKZSYE.png') top left repeat;
+  color: #5c4b3c;
+  padding: 30px;
 }
+
 h1 {
   text-align: center;
-  color: #333;
+  color: #7b5e4c;
+  font-size: 28px;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px #e9d3c0;
+}
+
+h2 {
+  font-size: 20px;
+  color: #6a4e42;
+  margin-bottom: 10px;
+}
+
+.trimestre {
+  background: #fffdf8;
+  border: 2px solid #decbb5;
+  box-shadow: 2px 2px 8px rgba(153, 119, 96, 0.2);
+  border-radius: 12px;
+  padding: 20px;
   margin-bottom: 30px;
 }
-h2 {
-  margin-top: 0;
-  font-size: 18px;
-}
-.trimestre {
-  padding: 16px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  background-color: #f9f0ff;
-  border: 2px solid #c9a2e0;
-}
-.tri2  { background-color: #e6fff9; border-color: #8ed6c5; }
-.tri3  { background-color: #ffe6f9; border-color: #d59aca; }
-/* Añade más colores pastel si deseas para tri4 a tri15 */
+
 .asignatura {
-  display: block;
-  margin: 10px 0;
-  padding: 10px;
-  background: #fff;
-  border-left: 4px solid #888;
-  border-radius: 6px;
+  background: #f8f3ed;
+  border-left: 6px solid #c0a98f;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
+
 .bloqueada {
-  background: #eee;
-  color: #888;
-  border-left: 4px solid #bbb;
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
+  background: #eae3dc;
+  border-left-color: #bfb0a1;
+  color: #8a7463;
 }
