@@ -1,50 +1,39 @@
 body {
   font-family: sans-serif;
-  padding: 20px;
   background: #fffaf0;
+  padding: 20px;
 }
-
 h1 {
   text-align: center;
   color: #333;
+  margin-bottom: 30px;
 }
-
+h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
 .trimestre {
-  padding: 12px;
-  margin: 10px 0;
-  cursor: pointer;
-  font-weight: bold;
-  color: #333;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
+  padding: 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #f9f0ff;
+  border: 2px solid #c9a2e0;
 }
-
-.detalle {
-  display: none;
-  background: #fef8e4;
-  padding: 10px;
-  margin-top: 5px;
-  border-left: 4px solid #aaa;
-  border-radius: 4px;
-}
-
+.tri2  { background-color: #e6fff9; border-color: #8ed6c5; }
+.tri3  { background-color: #ffe6f9; border-color: #d59aca; }
+/* Añade más colores pastel si deseas para tri4 a tri15 */
 .asignatura {
-  margin-bottom: 8px;
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  background: #fff;
+  border-left: 4px solid #888;
+  border-radius: 6px;
 }
-
-/* 🎨 Colores pastel por trimestre */
-.tri1  { background-color: #f9e6ff; border: 2px solid #d09fe0; }
-.tri2  { background-color: #ffe6e6; border: 2px solid #e49a9a; }
-.tri3  { background-color: #e6f9ff; border: 2px solid #8ec9db; }
-.tri4  { background-color: #fff4cc; border: 2px solid #d6b35c; }
-.tri5  { background-color: #e6ffe6; border: 2px solid #98d898; }
-.tri6  { background-color: #e6f0ff; border: 2px solid #93b3dd; }
-.tri7  { background-color: #ffecf2; border: 2px solid #cc8fad; }
-.tri8  { background-color: #f3ffe6; border: 2px solid #a3c67a; }
-.tri9  { background-color: #ffe6f9; border: 2px solid #d59aca; }
-.tri10 { background-color: #e6ffff; border: 2px solid #84d2d2; }
-.tri11 { background-color: #fff1e6; border: 2px solid #d2a979; }
-.tri12 { background-color: #f0e6ff; border: 2px solid #b9a2d5; }
-.tri13 { background-color: #e6ffe6; border: 2px solid #8ecf8e; }
-.tri14 { background-color: #fffad6; border: 2px solid #caa84d; }
-.tri15 { background-color: #e6f0f5; border: 2px solid #a0bfcf; }
+.bloqueada {
+  background: #eee;
+  color: #888;
+  border-left: 4px solid #bbb;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
