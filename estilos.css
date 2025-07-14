@@ -1,3 +1,4 @@
+/* 🌿 Estilo general */
 body {
   font-family: 'Georgia', serif;
   background: #fdf8f3 url('https://i.imgur.com/EJKZSYE.png') repeat;
@@ -5,6 +6,7 @@ body {
   padding: 30px;
 }
 
+/* Encabezado */
 h1 {
   text-align: center;
   font-size: 32px;
@@ -19,6 +21,7 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* Barra de progreso */
 .progreso-container {
   background: #e8d8c4;
   border: 1px solid #c7b299;
@@ -43,20 +46,50 @@ h1 {
   font-weight: bold;
 }
 
+/* Tarjetas por trimestre */
 .trimestre {
   background: #fffdf8;
   border: 2px solid #decbb5;
   border-radius: 12px;
   padding: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
+/* Materias */
 .asignatura {
   display: block;
-  margin: 10px 0;
+  margin: 8px 0;
   padding: 10px;
-  background: #f8f3ed;
   border-left: 6px solid #c0a98f;
   border-radius: 8px;
+  background: #f8f3ed;
   font-size: 16px;
+}
+
+/* Materias bloqueadas */
+.bloqueada {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #eae3dc !important;
+  border-left-color: #bfb0a1 !important;
+  color: #8a7463;
+}
+
+/* ✨ Colores temáticos por área */
+.finanzas  { background: #f7f2e7; border-left-color: #c9b89a; }
+.alimentos { background: #e6f7e2; border-left-color: #97cfa3; }
+.idiomas   { background: #eef0fb; border-left-color: #a1a9d3; }
+.cultura   { background: #fbeff1; border-left-color: #d6aac6; }
+.gestion   { background: #fff3ea; border-left-color: #ddb08c; }
+.tecnologia{ background: #eaf6f8; border-left-color: #8ac8d3; }
+.general   { background: #f8f3ed; border-left-color: #c0a98f; }
+.pasantia  { background: #f2ecdf; border-left-color: #b1a586; }
+
+/* Footer decorativo */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-style: italic;
+  font-size: 15px;
+  color: #6a4e42;
 }
