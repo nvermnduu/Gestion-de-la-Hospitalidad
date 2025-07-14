@@ -1,4 +1,4 @@
-// 📊 Actualiza la barra de progreso
+// 📊 Barra de progreso
 function actualizarProgreso() {
   const casillas = document.querySelectorAll('input[type="checkbox"]');
   const total = casillas.length;
@@ -13,23 +13,23 @@ function actualizarProgreso() {
   document.getElementById('porcentajeProgreso').textContent = porcentaje + '% cursado';
 }
 
-// 🔓 Desbloquea materias específicas por ID
+// 🔓 Desbloqueo por requisito
 function desbloquear(ids) {
   ids.forEach(function(id) {
-    const bloque = document.getElementById(id);
-    if (bloque && bloque.classList.contains('bloqueada')) {
-      bloque.classList.remove('bloqueada');
-      const input = bloque.querySelector('input');
+    const materia = document.getElementById(id);
+    if (materia && materia.classList.contains('bloqueada')) {
+      materia.classList.remove('bloqueada');
+      const input = materia.querySelector('input');
       if (input) input.disabled = false;
-      bloque.style.opacity = '1';
-      bloque.style.cursor = 'pointer';
-      bloque.style.color = '#000';
-      bloque.style.borderLeft = '6px solid ' + getColorPorClase(bloque.className);
+      materia.style.opacity = '1';
+      materia.style.cursor = 'pointer';
+      materia.style.color = '#000';
+      materia.style.borderLeft = '6px solid ' + getColorPorClase(materia.className);
     }
   });
 }
 
-// 🌈 Retorna color por clase de materia
+// 🎨 Asigna color por área
 function getColorPorClase(clase) {
   if (clase.includes('finanzas')) return '#c9b89a';
   if (clase.includes('alimentos')) return '#97cfa3';
@@ -39,5 +39,5 @@ function getColorPorClase(clase) {
   if (clase.includes('tecnologia')) return '#8ac8d3';
   if (clase.includes('general')) return '#c0a98f';
   if (clase.includes('pasantia')) return '#b1a586';
-  return '#aaa'; // color de respaldo
+  return '#aaa';
 }
