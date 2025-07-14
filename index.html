@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Académica – Gestión de la Hospitalidad</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <h1>📘 Malla Académica – Gestión de la Hospitalidad</h1>
+
+  <div class="trimestre tri1" onclick="toggleDetalle('tri1')">1️⃣ Trimestre 1</div>
+  <div class="detalle" id="tri1">
+    <div class="asignatura"><strong>FC-1129:</strong> Matemática I – 4 UC</div>
+    <div class="asignatura"><strong>FC-1221:</strong> Inglés I – 3 UC</div>
+    <div class="asignatura"><strong>FC-1505:</strong> Lenguaje I – 3 UC</div>
+    <div class="asignatura"><strong>FCA-151:</strong> Hombre, Cultura y Sociedad I – 3 UC</div>
+    <div class="asignatura"><strong>TS-1113:</strong> Fundamentos de Administración – 3 UC</div>
+  </div>
+
+  <div class="trimestre tri2" onclick="toggleDetalle('tri2')">2️⃣ Trimestre 2</div>
+  <div class="detalle" id="tri2">
+    <div class="asignatura"><strong>FC-1229:</strong> Matemática II – 4 UC | Req: <a href="#tri1">FC-1129</a></div>
+    <div class="asignatura"><strong>FC-1224:</strong> Inglés II – 3 UC | Req: <a href="#tri1">FC-1221</a></div>
+    <div class="asignatura"><strong>FC-1515:</strong> Lenguaje II – 3 UC | Req: <a href="#tri1">FC-1505</a></div>
+    <div class="asignatura"><strong>FCA-161:</strong> Hombre, Cultura y Sociedad II – 3 UC | Req: <a href="#tri1">FCA-151</a></div>
+    <div class="asignatura"><strong>TS-1114:</strong> Introducción a la Química – 3 UC | Req: <a href="#tri1">FC-1129</a></div>
+  </div>
+
+  <div class="trimestre tri3" onclick="toggleDetalle('tri3')">3️⃣ Trimestre 3</div>
+  <div class="detalle" id="tri3">
+    <div class="asignatura"><strong>FC-3701:</strong> Matemática Financiera – 4 UC | Req: <a href="#tri2">FC-1229</a></div>
+    <div class="asignatura"><strong>FC-1525:</strong> Lenguaje III – 3 UC | Req: <a href="#tri2">FC-1515</a></div>
+    <div class="asignatura"><strong>FC-1701:</strong> Inglés III – 3 UC | Req: <a href="#tri2">FC-1224</a></div>
+    <div class="asignatura"><strong>FCA-171:</strong> Hombre, Cultura y Sociedad III – 3 UC | Req: <a href="#tri2">FCA-161</a></div>
+    <div class="asignatura"><strong>TS-1724:</strong> Contabilidad – 3 UC | Req: <a href="#tri1">TS-1113</a></div>
+  </div>
+
+  <div class="trimestre tri4" onclick="toggleDetalle('tri4')">4️⃣ Trimestre 4</div>
+  <div class="detalle" id="tri4">
+    <div class="asignatura"><strong>FC-2702:</strong> Inglés IV – 3 UC | Req: <a href="#tri3">FC-1701</a></div>
+    <div class="asignatura"><strong>FC-2705:</strong> Estadística – 3 UC | Req: <a href="#tri3">FC-3701</a></div>
+    <div class="asignatura"><strong>FC-2713:</strong> Introducción a las TI – 3 UC</div>
+    <div class="asignatura"><strong>TS-2711:</strong> Química de los Alimentos – 3 UC | Req: <a href="#tri2">TS-1114</a></div>
+    <div class="asignatura"><strong>TS-2712:</strong> Introducción al Servicio de la Hospitalidad – 3 UC</div>
+  </div>
+
+  <div class="trimestre tri5" onclick="toggleDetalle('tri5')">5️⃣ Trimestre 5</div>
+  <div class="detalle" id="tri5">
+    <div class="asignatura"><strong>FC-2703:</strong> Inglés V – 3 UC | Req: <a href="#tri4">FC-2702</a></div>
+    <div class="asignatura"><strong>TS-2713:</strong> Economía Empresarial – 3 UC | Req: <a href="#tri3">TS-1724</a></div>
+    <div class="asignatura"><strong>TS-2715:</strong> Fundamentos de Nutrición – 3 UC | Req: <a href="#tri4">TS-2711</a></div>
+    <div class="asignatura"><strong>TS-2716:</strong> Geografía y Hospitalidad – 3 UC | Req: <a href="#tri4">TS-2712</a></div>
+    <div class="asignatura"><strong>TS-2721:</strong> Contabilidad para Servicios de la Hospitalidad – 3 UC | Req: <a href="#tri2">FC-1229</a> + <a href="#tri3">TS-1724</a></div>
+  </div>
+    <div class="trimestre tri6" onclick="toggleDetalle('tri6')">6️⃣ Trimestre 6</div>
+  <div class="detalle" id="tri6">
+    <div class="asignatura"><strong>FC-2704:</strong> Inglés VI – 3 UC | Req: <a href="#tri5">FC-2703</a></div>
+    <div class="asignatura"><strong>TS-2719:</strong> Operación del Servicio de Ama de Llaves – 3 UC | Req: <a href="#tri4">TS-2712</a></div>
+    <div class="asignatura"><strong>TS-2720:</strong> Fundamentos de Higiene – 3 UC | Req: <a href="#tri5">TS-2715</a></div>
+    <div class="asignatura"><strong>TS-3714:</strong> Legislación Aplicada a la Hospitalidad – 3 UC | Req: <a href="#tri4">TS-2712</a></div>
+    <div class="asignatura"><strong>TS-3715:</strong> Control de Costos de Alimentos y Bebidas – 3 UC | Req: <a href="#tri5">TS-2721</a></div>
+  </div>
+
+  <div class="trimestre tri7" onclick="toggleDetalle('tri7')">7️⃣ Trimestre 7</div>
+  <div class="detalle" id="tri7">
+    <div class="asignatura"><strong>TS-2718:</strong> Fundamentos de Mercadeo – 3 UC | Req: <a href="#tri4">FC-2705</a> + <a href="#tri5">TS-2713</a></div>
+    <div class="asignatura"><strong>TS-3711:</strong> Operación del Servicio de Atención y Registro – 3 UC | Req: <a href="#tri6">TS-2719</a></div>
+    <div class="asignatura"><strong>TS-3712:</strong> Producción de Alimentos – 4 UC | Req: <a href="#tri6">TS-2720</a> + <a href="#tri6">TS-3715</a></div>
+    <div class="asignatura"><strong>TS-3713:</strong> Producción de Bebidas – 3 UC | Req: <a href="#tri6">TS-2720</a></div>
+    <div class="asignatura"><strong>TS-3720:</strong> Mantenimiento de Planta Física – 3 UC</div>
+  </div>
+
+  <div class="trimestre tri8" onclick="toggleDetalle('tri8')">8️⃣ Trimestre 8</div>
+  <div class="detalle" id="tri8">
+    <div class="asignatura"><strong>TS-3716:</strong> Gestión de Compras y Almacenamiento – 3 UC | Req: <a href="#tri7">TS-3712</a> + <a href="#tri7">TS-3713</a></div>
+    <div class="asignatura"><strong>TS-3717:</strong> Gestión de la Producción – 6 UC | Req: <a href="#tri7">TS-3712</a> + <a href="#tri7">TS-3713</a></div>
+    <div class="asignatura"><strong>TS-3718:</strong> Servicio de Alimentos y Bebidas – 2 UC | Req: <a href="#tri7">TS-3712</a></div>
+    <div class="asignatura"><strong>Estudios Generales I:</strong> 3 UC | Req: <a href="#tri3">FC-1525</a> + <a href="#tri3">FCA-171</a></div>
+    <div class="asignatura"><strong>Servicio Comunitario:</strong> Requiere 105 UC</div>
+  </div>
+
+  <div class="trimestre tri9" onclick="toggleDetalle('tri9')">9️⃣ Trimestre 9</div>
+  <div class="detalle" id="tri9">
+    <div class="asignatura"><strong>EP-2420:</strong> Pasantía Intermedia Área Operativa – 6 UC | Req: 120 UC + Autorización</div>
+    <div class="asignatura"><strong>EP-3424:</strong> Pasantía Intermedia de Intercambio Internacional – 6 UC | Req: 120 UC + Autorización</div>
+    <div class="asignatura"><em>*El estudiante debe inscribir solo una opción</em></div>
+  </div>
+
+  <div class="trimestre tri10" onclick="toggleDetalle('tri10')">🔟 Trimestre 10</div>
+  <div class="detalle" id="tri10">
+    <div class="asignatura"><strong>TS-4711:</strong> Técnicas Culinarias – 3 UC | Req: <a href="#tri8">TS-3717</a></div>
+    <div class="asignatura"><strong>TS-4712:</strong> Gestión Financiera – 3 UC | Req: <a href="#tri9">EP-2420</a> + <a href="#tri6">TS-3715</a></div>
+    <div class="asignatura"><strong>TS-4716:</strong> Mercadeo y Hospitalidad – 3 UC | Req: <a href="#tri9">EP-2420</a> + <a href="#tri7">TS-2718</a></div>
+    <div class="asignatura"><strong>TS-4720:</strong> Supervisión de Personas y Procesos – 3 UC | Req: <a href="#tri9">EP-2420</a> + <a href="#tri6">TS-3714</a></div>
+    <div class="asignatura"><strong>Estudios Generales II:</strong> 3 UC | Req: <a href="#tri3">FC-1525</a> + <a href="#tri3">FCA-171</a></div>
+  </div>
+    <div class="trimestre tri11" onclick="toggleDetalle('tri11')">1️⃣1️⃣ Trimestre 11</div>
+  <div class="detalle" id="tri11">
+    <div class="asignatura"><strong>FC-4702:</strong> Técnicas de Investigación – 3 UC | Req: <a href="#tri4">FC-2705</a></div>
+    <div class="asignatura"><strong>TS-4713:</strong> Sistemas de Información Gerencial – 3 UC | Req: <a href="#tri4">FC-2713</a></div>
+    <div class="asignatura"><strong>TS-4715:</strong> Gestión Presupuestaria – 3 UC | Req: <a href="#tri10">TS-4712</a></div>
+    <div class="asignatura"><strong>TS-4718:</strong> Enfoques y Habilidades Gerenciales – 3 UC | Req: <a href="#tri10">TS-4720</a></div>
+    <div class="asignatura"><strong>Estudios Generales III:</strong> 3 UC | Req: <a href="#tri3">FC-1525</a> + <a href="#tri3">FCA-171</a></div>
+  </div>
+
+  <div class="trimestre tri12" onclick="toggleDetalle('tri12')">1️⃣2️⃣ Trimestre 12</div>
+  <div class="detalle" id="tri12">
+    <div class="asignatura"><strong>TS-3246:</strong> Hotelería Clínica – 3 UC | Req: 140 UC + <a href="#tri7">TS-3711</a></div>
+    <div class="asignatura"><strong>TS-4714:</strong> Seguridad Industrial – 3 UC | Req: 140 UC + <a href="#tri7">TS-3720</a></div>
+    <div class="asignatura"><strong>TS-4719:</strong> Formulación y Evaluación de Proyectos – 3 UC | Req: <a href="#tri11">TS-4715</a> + <a href="#tri11">FC-4702</a></div>
+    <div class="asignatura"><strong>TS-5715:</strong> Gerencia de Recursos Humanos – 3 UC | Req: <a href="#tri11">TS-4718</a></div>
+    <div class="asignatura"><strong>Estudios Generales IV:</strong> 3 UC | Req: <a href="#tri3">FC-1525</a> + <a href="#tri3">FCA-171</a></div>
+  </div>
+
+  <div class="trimestre tri13" onclick="toggleDetalle('tri13')">1️⃣3️⃣ Trimestre 13</div>
+  <div class="detalle" id="tri13">
+    <div class="asignatura"><strong>EP-3420:</strong> Pasantía Larga – 9 UC | Req: 174 UC + Autorización</div>
+    <div class="asignatura"><strong>EP-3423:</strong> Pasantía Larga de Intercambio Internacional – 9 UC | Req: 174 UC + Autorización</div>
+    <div class="asignatura"><em>*Solo se inscribe una opción</em></div>
+  </div>
+
+  <div class="trimestre tri14" onclick="toggleDetalle('tri14')">1️⃣4️⃣ Trimestre 14</div>
+  <div class="detalle" id="tri14">
+    <div class="asignatura"><strong>TS-4717:</strong> Organización de Eventos – 3 UC | Req: <a href="#tri10">TS-4716</a></div>
+    <div class="asignatura"><strong>TS-5716:</strong> Gestión de PyME – 3 UC | Req: <a href="#tri12">TS-4719</a></div>
+    <div class="asignatura"><strong>TS-5717:</strong> Atención y Servicio Excepcional – 3 UC | Req: 150 UC</div>
+    <div class="asignatura"><strong>Estudios Generales V:</strong> 3 UC | Req: <a href="#tri3">FC-1525</a> + <a href="#tri3">FCA-171</a></div>
+    <div class="asignatura"><strong>Electiva Profesional I:</strong> 3 UC | Req: 140 UC</div>
+  </div>
+
+  <div class="trimestre tri15" onclick="toggleDetalle('tri15')">1️⃣5️⃣ Trimestre 15</div>
+  <div class="detalle" id="tri15">
+    <div class="asignatura"><strong>Estudios Generales VI:</strong> 3 UC | Req: <a href="#tri3">FC-1525</a> + <a href="#tri3">FCA-171</a></div>
+    <div class="asignatura"><strong>Electiva Profesional II:</strong> 3 UC | Req: 140 UC</div>
+    <div class="asignatura"><strong>Electiva Profesional III:</strong> 3 UC | Req: 140 UC</div>
+    <div class="asignatura"><strong>Electiva Profesional IV:</strong> 3 UC | Req: 140 UC</div>
+  </div>
+   <script src="script.js"></script>
+</body>
+</html>
