@@ -13,151 +13,152 @@
       <div class="progreso-barra" id="barraProgreso"></div>
       <span id="porcentajeProgreso">0% cursado</span>
     </div>
+  </header>
+
   <!-- Trimestre 1 -->
   <div class="trimestre tri1">
     <h2>1️⃣ Trimestre 1</h2>
-    <label class="asignatura"><input type="checkbox" onchange="desbloquear(['mat2'])"><strong>FC-1129: Matemática I</strong> – 4 UC</label>
-    <label class="asignatura"><input type="checkbox" onchange="desbloquear(['ing2'])"><strong>FC-1221: Inglés I</strong> – 3 UC</label>
-    <label class="asignatura"><input type="checkbox" onchange="desbloquear(['len2'])"><strong>FC-1505: Lenguaje I</strong> – 3 UC</label>
-    <label class="asignatura"><input type="checkbox" onchange="desbloquear(['soc2'])"><strong>FCA-151: Hombre, Cultura y Sociedad I</strong> – 3 UC</label>
-    <label class="asignatura"><input type="checkbox" onchange="desbloquear(['conta'])"><strong>TS-1113: Fundamentos de Administración</strong> – 3 UC</label>
+    <label class="asignatura finanzas"><input type="checkbox" onchange="actualizarProgreso(); desbloquear(['mat2','quimica'])"> 💸 <strong>FC-1129: Matemática I</strong> – 4 UC</label>
+    <label class="asignatura idiomas"><input type="checkbox" onchange="actualizarProgreso(); desbloquear(['ing2'])"> 🌍 <strong>FC-1221: Inglés I</strong> – 3 UC</label>
+    <label class="asignatura cultura"><input type="checkbox" onchange="actualizarProgreso(); desbloquear(['len2'])"> 📚 <strong>FC-1505: Lenguaje I</strong> – 3 UC</label>
+    <label class="asignatura cultura"><input type="checkbox" onchange="actualizarProgreso(); desbloquear(['soc2'])"> 🧠 <strong>FCA-151: H.Cultura y Sociedad I</strong> – 3 UC</label>
+    <label class="asignatura gestion"><input type="checkbox" onchange="actualizarProgreso(); desbloquear(['conta'])"> 💼 <strong>TS-1113: Fund. Administración</strong> – 3 UC</label>
   </div>
 
   <!-- Trimestre 2 -->
   <div class="trimestre tri2">
     <h2>2️⃣ Trimestre 2</h2>
-    <label class="asignatura bloqueada" id="mat2"><input type="checkbox" disabled onchange="desbloquear(['matfin'])"><strong>FC-1229: Matemática II</strong> – 4 UC</label>
-    <label class="asignatura bloqueada" id="ing2"><input type="checkbox" disabled><strong>FC-1224: Inglés II</strong> – 3 UC</label>
-    <label class="asignatura bloqueada" id="len2"><input type="checkbox" disabled><strong>FC-1515: Lenguaje II</strong> – 3 UC</label>
-    <label class="asignatura bloqueada" id="soc2"><input type="checkbox" disabled><strong>FCA-161: Hombre, Cultura y Sociedad II</strong> – 3 UC</label>
-    <label class="asignatura"><input type="checkbox"><strong>TS-1114: Introducción a la Química</strong> – 3 UC</label>
+    <label class="asignatura bloqueada finanzas" id="mat2"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['matfin'])"> 💸 <strong>FC-1229: Matemática II</strong> – 4 UC | Req: Matemática I</label>
+    <label class="asignatura bloqueada idiomas" id="ing2"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['ing3'])"> 🌍 <strong>FC-1224: Inglés II</strong> – 3 UC | Req: Inglés I</label>
+    <label class="asignatura bloqueada cultura" id="len2"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['len3'])"> 📚 <strong>FC-1515: Lenguaje II</strong> – 3 UC | Req: Lenguaje I</label>
+    <label class="asignatura bloqueada cultura" id="soc2"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['soc3'])"> 🧠 <strong>FCA-161: H.Cultura y Sociedad II</strong> – 3 UC | Req: H.C. I</label>
+    <label class="asignatura bloqueada alimentos" id="quimica"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['alimentos'])"> 🧪 <strong>TS-1114: Introducción a la Química</strong> – 3 UC | Req: Matemática I</label>
   </div>
 
   <!-- Trimestre 3 -->
   <div class="trimestre tri3">
     <h2>3️⃣ Trimestre 3</h2>
-    <label class="asignatura bloqueada" id="matfin"><input type="checkbox" disabled><strong>FC-3701: Matemática Financiera</strong> – 4 UC | Req: Matemática II</label>
-    <label class="asignatura bloqueada" id="conta"><input type="checkbox" disabled><strong>TS-1724: Contabilidad</strong> – 3 UC | Req: Fund. de Administración</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>FC-1525: Lenguaje III</strong> – 3 UC | Req: Lenguaje II</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>FC-1701: Inglés III</strong> – 3 UC | Req: Inglés II</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>FCA-171: Hombre, Cultura y Sociedad III</strong> – 3 UC | Req: Cultura II</label>
+    <label class="asignatura bloqueada finanzas" id="matfin"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['estadistica'])"> 💸 <strong>FC-3701: Matemática Financiera</strong> – 4 UC | Req: Matemática II</label>
+    <label class="asignatura bloqueada cultura" id="len3"><input type="checkbox" disabled onchange="actualizarProgreso();"> 📚 <strong>FC-1525: Lenguaje III</strong> – 3 UC | Req: Lenguaje II</label>
+    <label class="asignatura bloqueada idiomas" id="ing3"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🌍 <strong>FC-1701: Inglés III</strong> – 3 UC | Req: Inglés II</label>
+    <label class="asignatura bloqueada cultura" id="soc3"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🧠 <strong>FCA-171: H.Cultura y Sociedad III</strong> – 3 UC | Req: H.C. II</label>
+    <label class="asignatura bloqueada finanzas" id="conta"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['economia','conta2'])"> 💸 <strong>TS-1724: Contabilidad</strong> – 3 UC | Req: Fund. Administración</label>
   </div>
-
-  <!-- Trimestre 4 -->
+    <!-- Trimestre 4 -->
   <div class="trimestre tri4">
     <h2>4️⃣ Trimestre 4</h2>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>FC-2705: Estadística</strong> – 3 UC | Req: Matemática Financiera</label>
-    <label class="asignatura"><input type="checkbox"><strong>FC-2702: Inglés IV</strong> – 3 UC</label>
-    <label class="asignatura"><input type="checkbox"><strong>FC-2713: Introducción a las TI</strong> – 3 UC</label>
-    <label class="asignatura"><input type="checkbox" onchange="desbloquear(['nutricion'])"><strong>TS-2711: Química de los Alimentos</strong> – 3 UC</label>
-    <label class="asignatura"><input type="checkbox" onchange="desbloquear(['ama'])"><strong>TS-2712: Introducción al Servicio de la Hospitalidad</strong> – 3 UC</label>
+    <label class="asignatura bloqueada idiomas" id="ing4"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['ing5'])"> 🌍 <strong>FC-2702: Inglés IV</strong> – 3 UC | Req: Inglés III</label>
+    <label class="asignatura bloqueada finanzas" id="estadistica"><input type="checkbox" disabled onchange="actualizarProgreso();"> 💸 <strong>FC-2705: Estadística</strong> – 3 UC | Req: Matemática Financiera</label>
+    <label class="asignatura tecnologia"><input type="checkbox" onchange="actualizarProgreso(); desbloquear(['sistemas'])"> 🖥️ <strong>FC-2713: Introducción a las TI</strong> – 3 UC</label>
+    <label class="asignatura bloqueada alimentos" id="alimentos"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['nutricion'])"> 🍽️ <strong>TS-2711: Química de los Alimentos</strong> – 3 UC | Req: Química</label>
+    <label class="asignatura gestion"><input type="checkbox" onchange="actualizarProgreso(); desbloquear(['ama','legislacion','geo'])"> 🏨 <strong>TS-2712: Introducción al Servicio de la Hospitalidad</strong> – 3 UC | Req: 21 UC</label>
   </div>
 
   <!-- Trimestre 5 -->
   <div class="trimestre tri5">
     <h2>5️⃣ Trimestre 5</h2>
-    <label class="asignatura bloqueada" id="nutricion"><input type="checkbox" disabled><strong>TS-2715: Fundamentos de Nutrición</strong> – 3 UC | Req: Química de Alimentos</label>
-    <label class="asignatura bloqueada" id="ama"><input type="checkbox" disabled><strong>TS-2719: Servicio de Ama de Llaves</strong> – 3 UC | Req: Servicio de la Hospitalidad</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-2716: Geografía y Hospitalidad</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-2721: Contabilidad para Hospitalidad</strong> – 3 UC | Req: Matemática II + Contabilidad</label>
-    <label class="asignatura"><input type="checkbox"><strong>FC-2703: Inglés V</strong> – 3 UC</label>
+    <label class="asignatura bloqueada idiomas" id="ing5"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['ing6'])"> 🌍 <strong>FC-2703: Inglés V</strong> – 3 UC | Req: Inglés IV</label>
+    <label class="asignatura bloqueada finanzas" id="economia"><input type="checkbox" disabled onchange="actualizarProgreso();"> 💸 <strong>TS-2713: Economía Empresarial</strong> – 3 UC | Req: Contabilidad</label>
+    <label class="asignatura bloqueada alimentos" id="nutricion"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['higiene'])"> 🍽️ <strong>TS-2715: Fundamentos de Nutrición</strong> – 3 UC | Req: Química de Alimentos</label>
+    <label class="asignatura bloqueada gestion" id="geo"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🏨 <strong>TS-2716: Geografía y Hospitalidad</strong> – 3 UC | Req: Introducción al Servicio</label>
+    <label class="asignatura bloqueada finanzas" id="conta2"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['costos'])"> 💸 <strong>TS-2721: Contabilidad para Servicios</strong> – 3 UC | Req: Matemática II + Contabilidad</label>
   </div>
+
   <!-- Trimestre 6 -->
   <div class="trimestre tri6">
     <h2>6️⃣ Trimestre 6</h2>
-    <label class="asignatura bloqueada" id="higiene"><input type="checkbox" disabled><strong>TS-2720: Fundamentos de Higiene</strong> – 3 UC | Req: Nutrición</label>
-    <label class="asignatura bloqueada" id="legislacion"><input type="checkbox" disabled><strong>TS-3714: Legislación en Hospitalidad</strong> – 3 UC | Req: Ama de Llaves</label>
-    <label class="asignatura bloqueada" id="costos"><input type="checkbox" disabled><strong>TS-3715: Control de Costos A&B</strong> – 3 UC | Req: Contabilidad para Hospitalidad</label>
-    <label class="asignatura"><input type="checkbox"><strong>FC-2704: Inglés VI</strong> – 3 UC</label>
+    <label class="asignatura bloqueada idiomas" id="ing6"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🌍 <strong>FC-2704: Inglés VI</strong> – 3 UC | Req: Inglés V</label>
+    <label class="asignatura bloqueada gestion" id="ama"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['registro'])"> 🏨 <strong>TS-2719: Ama de Llaves</strong> – 3 UC | Req: Introducción al Servicio</label>
+    <label class="asignatura bloqueada alimentos" id="higiene"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['produccion','bebidas'])"> 🫧 <strong>TS-2720: Fundamentos de Higiene</strong> – 3 UC | Req: Nutrición</label>
+    <label class="asignatura bloqueada gestion" id="legislacion"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['supervision'])"> 📜 <strong>TS-3714: Legislación en Hospitalidad</strong> – 3 UC | Req: Introducción al Servicio</label>
+    <label class="asignatura bloqueada finanzas" id="costos"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['produccion'])"> 💸 <strong>TS-3715: Control de Costos A&B</strong> – 3 UC | Req: Contabilidad para Servicios</label>
   </div>
-
-  <!-- Trimestre 7 -->
+    <!-- Trimestre 7 -->
   <div class="trimestre tri7">
     <h2>7️⃣ Trimestre 7</h2>
-    <label class="asignatura bloqueada" id="mercadeo"><input type="checkbox" disabled><strong>TS-2718: Fundamentos de Mercadeo</strong> – 3 UC | Req: Estadística</label>
-    <label class="asignatura bloqueada" id="registro"><input type="checkbox" disabled><strong>TS-3711: Atención y Registro</strong> – 3 UC | Req: Ama de Llaves</label>
-    <label class="asignatura bloqueada" id="produccion"><input type="checkbox" disabled onchange="desbloquear(['compras','gestionprod'])"><strong>TS-3712: Producción de Alimentos</strong> – 4 UC | Req: Ama de Llaves</label>
-    <label class="asignatura bloqueada" id="bebidas"><input type="checkbox" disabled><strong>TS-3713: Bebidas y Servicio</strong> – 4 UC | Req: Ama de Llaves</label>
-    <label class="asignatura"><input type="checkbox"><strong>FC-3719: Inglés VII</strong> – 3 UC</label>
+    <label class="asignatura bloqueada gestion" id="mercadeo"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['marketing'])"> 🏷️ <strong>TS-2718: Fundamentos de Mercadeo</strong> – 3 UC | Req: Estadística + Economía Empresarial</label>
+    <label class="asignatura bloqueada gestion" id="registro"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🧾 <strong>TS-3711: Atención y Registro</strong> – 3 UC | Req: Ama de Llaves</label>
+    <label class="asignatura bloqueada alimentos" id="produccion"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['compras','gestionprod','servicioayb'])"> 🍳 <strong>TS-3712: Producción de Alimentos</strong> – 4 UC | Req: Higiene + Costos</label>
+    <label class="asignatura bloqueada alimentos" id="bebidas"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🍷 <strong>TS-3713: Producción de Bebidas</strong> – 3 UC | Req: Higiene</label>
+    <label class="asignatura bloqueada gestion" id="mantenimiento"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🧰 <strong>TS-3720: Mantenimiento de Planta Física</strong> – 3 UC | Req: 65 UC</label>
   </div>
 
   <!-- Trimestre 8 -->
   <div class="trimestre tri8">
     <h2>8️⃣ Trimestre 8</h2>
-    <label class="asignatura bloqueada" id="compras"><input type="checkbox" disabled><strong>TS-3716: Gestión de Compras</strong> – 3 UC | Req: Producción</label>
-    <label class="asignatura bloqueada" id="gestionprod"><input type="checkbox" disabled><strong>TS-3717: Gestión de Producción</strong> – 6 UC | Req: Producción</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-3718: Servicio A&B</strong> – 2 UC | Req: Producción</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>Estudios Generales I</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>Servicio Comunitario</strong> – Requiere 105 UC</label>
+    <label class="asignatura bloqueada gestion" id="compras"><input type="checkbox" disabled onchange="actualizarProgreso();"> 📦 <strong>TS-3716: Gestión de Compras</strong> – 3 UC | Req: Producción + Bebidas</label>
+    <label class="asignatura bloqueada gestion" id="gestionprod"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🧁 <strong>TS-3717: Gestión de la Producción</strong> – 6 UC | Req: Producción + Bebidas</label>
+    <label class="asignatura bloqueada alimentos" id="servicioayb"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🍽️ <strong>TS-3718: Servicio de Alimentos y Bebidas</strong> – 2 UC | Req: Producción</label>
+    <label class="asignatura bloqueada cultura"><input type="checkbox" disabled onchange="actualizarProgreso();"> 📖 <strong>Estudios Generales I</strong> – 3 UC | Req: Lenguaje III + HCS III</label>
+    <label class="asignatura bloqueada general"><input type="checkbox" disabled onchange="actualizarProgreso();"> 👫 <strong>Servicio Comunitario</strong> – Requiere 105 UC</label>
   </div>
 
   <!-- Trimestre 9 -->
   <div class="trimestre tri9">
     <h2>9️⃣ Trimestre 9</h2>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>EP-2420: Pasantía Operativa</strong> – 6 UC | Req: 120 UC + Autorización</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>EP-3424: Pasantía Internacional Intermedia</strong> – 6 UC | Req: 120 UC + Autorización</label>
+    <label class="asignatura bloqueada pasantia"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['finanzas','supervision','marketing'])"> 🌎 <strong>EP-2420: Pasantía Intermedia Operativa</strong> – 6 UC | Req: 120 UC + Autorización</label>
+    <label class="asignatura bloqueada pasantia"><input type="checkbox" disabled onchange="actualizarProgreso();"> ✈️ <strong>EP-3424: Pasantía Internacional Intermedia</strong> – 9 UC | Req: Autorización</label>
   </div>
-
-  <!-- Trimestre 10 -->
+    <!-- Trimestre 10 -->
   <div class="trimestre tri10">
     <h2>🔟 Trimestre 10</h2>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-4711: Técnicas Culinarias</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-4712: Gestión Financiera</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-4716: Mercadeo y Hospitalidad</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-4720: Supervisión de Personas</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>Estudios Generales II</strong> – 3 UC</label>
+    <label class="asignatura bloqueada alimentos" id="culinaria"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🍳 <strong>TS-4711: Técnicas Culinarias</strong> – 3 UC | Req: Gestión de Producción</label>
+    <label class="asignatura bloqueada finanzas" id="finanzas"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['presupuesto'])"> 💸 <strong>TS-4712: Gestión Financiera</strong> – 3 UC | Req: Pasantía Intermedia + Costos</label>
+    <label class="asignatura bloqueada gestion" id="marketing"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['eventos'])"> 🏷️ <strong>TS-4716: Mercadeo y Hospitalidad</strong> – 3 UC | Req: Pasantía Intermedia + Fund. Mercadeo</label>
+    <label class="asignatura bloqueada gestion" id="supervision"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['habilidades'])"> 🧑‍💼 <strong>TS-4720: Supervisión de Personas y Procesos</strong> – 3 UC | Req: Pasantía Intermedia + Legislación</label>
+    <label class="asignatura bloqueada cultura"><input type="checkbox" disabled onchange="actualizarProgreso();"> 📚 <strong>Estudios Generales II</strong> – 3 UC | Req: Lenguaje III + HCS III</label>
   </div>
-    <!-- Trimestre 11 -->
+
+  <!-- Trimestre 11 -->
   <div class="trimestre tri11">
     <h2>1️⃣1️⃣ Trimestre 11</h2>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>FC-4702: Técnicas de Investigación</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-4713: Sistemas de Información Gerencial</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-4715: Gestión Presupuestaria</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-4718: Habilidades Gerenciales</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>Estudios Generales III</strong> – 3 UC</label>
+    <label class="asignatura bloqueada cultura"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🧠 <strong>FC-4702: Técnicas de Investigación</strong> – 3 UC | Req: Estadística</label>
+    <label class="asignatura bloqueada tecnologia" id="sistemas"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🖥️ <strong>TS-4713: Sistemas de Información Gerencial</strong> – 3 UC | Req: Introducción a las TI</label>
+    <label class="asignatura bloqueada finanzas" id="presupuesto"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['proyectos'])"> 💸 <strong>TS-4715: Gestión Presupuestaria</strong> – 3 UC | Req: Gestión Financiera</label>
+    <label class="asignatura bloqueada gestion" id="habilidades"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['rrhh'])"> 🧠 <strong>TS-4718: Habilidades Gerenciales</strong> – 3 UC | Req: Supervisión</label>
+    <label class="asignatura bloqueada cultura"><input type="checkbox" disabled onchange="actualizarProgreso();"> 📖 <strong>Estudios Generales III</strong> – 3 UC | Req: Lenguaje III + HCS III</label>
   </div>
 
   <!-- Trimestre 12 -->
   <div class="trimestre tri12">
     <h2>1️⃣2️⃣ Trimestre 12</h2>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-3246: Hotelería Clínica</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-4714: Seguridad Industrial</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-4719: Evaluación de Proyectos</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-5715: Gerencia de RRHH</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>Estudios Generales IV</strong> – 3 UC</label>
+    <label class="asignatura bloqueada gestion"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🏨 <strong>TS-3246: Hotelería Clínica</strong> – 3 UC | Req: 140 UC + Atención y Registro</label>
+    <label class="asignatura bloqueada gestion"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🦺 <strong>TS-4714: Seguridad Industrial</strong> – 3 UC | Req: 140 UC + Mantenimiento</label>
+    <label class="asignatura bloqueada gestion" id="proyectos"><input type="checkbox" disabled onchange="actualizarProgreso(); desbloquear(['pymes'])"> 🧮 <strong>TS-4719: Formulación y Evaluación de Proyectos</strong> – 3 UC | Req: Presupuesto + Investigación</label>
+    <label class="asignatura bloqueada gestion" id="rrhh"><input type="checkbox" disabled onchange="actualizarProgreso();"> 👥 <strong>TS-5715: Gerencia de Recursos Humanos</strong> – 3 UC | Req: Habilidades Gerenciales</label>
+    <label class="asignatura bloqueada cultura"><input type="checkbox" disabled onchange="actualizarProgreso();"> 📖 <strong>Estudios Generales IV</strong> – 3 UC | Req: Lenguaje III + HCS III</label>
   </div>
-
-  <!-- Trimestre 13 -->
+    <!-- Trimestre 13 -->
   <div class="trimestre tri13">
     <h2>1️⃣3️⃣ Trimestre 13</h2>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>EP-3420: Pasantía Larga</strong> – 9 UC | Requiere 174 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>EP-3423: Pasantía Internacional</strong> – 9 UC | Requiere 174 UC</label>
+    <label class="asignatura bloqueada pasantia"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🌎 <strong>EP-3420: Pasantía Larga</strong> – 9 UC | Req: 174 UC + Autorización</label>
+    <label class="asignatura bloqueada pasantia"><input type="checkbox" disabled onchange="actualizarProgreso();"> ✈️ <strong>EP-3423: Pasantía Internacional</strong> – 9 UC | Req: Autorización</label>
   </div>
 
   <!-- Trimestre 14 -->
   <div class="trimestre tri14">
     <h2>1️⃣4️⃣ Trimestre 14</h2>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-4717: Organización de Eventos</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-5716: Gestión de PyME</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>TS-5717: Servicio Excepcional</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>Estudios Generales V</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>Electiva Profesional I</strong> – 3 UC</label>
+    <label class="asignatura bloqueada gestion" id="eventos"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🎪 <strong>TS-4717: Organización de Eventos</strong> – 3 UC | Req: Mercadeo y Hospitalidad</label>
+    <label class="asignatura bloqueada gestion" id="pymes"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🧳 <strong>TS-5716: Gestión de PyME</strong> – 3 UC | Req: Formulación y Evaluación de Proyectos</label>
+    <label class="asignatura bloqueada gestion"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🌟 <strong>TS-5717: Atención y Servicio Excepcional</strong> – 3 UC | Req: 150 UC</label>
+    <label class="asignatura bloqueada cultura"><input type="checkbox" disabled onchange="actualizarProgreso();"> 📖 <strong>Estudios Generales V</strong> – 3 UC | Req: Lenguaje III + HCS III</label>
+    <label class="asignatura bloqueada general"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🌱 <strong>Electiva Profesional I</strong> – 3 UC | Req: 140 UC</label>
   </div>
 
   <!-- Trimestre 15 -->
   <div class="trimestre tri15">
     <h2>1️⃣5️⃣ Trimestre 15</h2>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>Estudios Generales VI</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>Electiva Profesional II</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>Electiva Profesional III</strong> – 3 UC</label>
-    <label class="asignatura bloqueada"><input type="checkbox" disabled><strong>Electiva Profesional IV</strong> – 3 UC</label>
+    <label class="asignatura bloqueada cultura"><input type="checkbox" disabled onchange="actualizarProgreso();"> 📖 <strong>Estudios Generales VI</strong> – 3 UC | Req: Lenguaje III + HCS III</label>
+    <label class="asignatura bloqueada general"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🌱 <strong>Electiva Profesional II</strong> – 3 UC | Req: 140 UC</label>
+    <label class="asignatura bloqueada general"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🌱 <strong>Electiva Profesional III</strong> – 3 UC | Req: 140 UC</label>
+    <label class="asignatura bloqueada general"><input type="checkbox" disabled onchange="actualizarProgreso();"> 🌱 <strong>Electiva Profesional IV</strong> – 3 UC | Req: 140 UC</label>
   </div>
 
-  <!-- 🌼 Footer cottagecore -->
-  <div style="text-align:center; margin-top:40px; font-style:italic; color:#6a4e42;">
-    ✿ Gracias por visitar esta malla ✿ <br>
+  <!-- 🌸 Footer cottagecore -->
+  <footer style="text-align:center; margin-top:40px; font-style:italic; color:#6a4e42;">
+    ✿ Gracias por recorrer esta malla ✿<br>
     <span style="font-size:14px;">“Los caminos del saber florecen con paciencia, como los jardines de abril.”</span>
-  </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
