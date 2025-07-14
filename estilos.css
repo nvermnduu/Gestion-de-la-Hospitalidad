@@ -1,8 +1,10 @@
-/* 🌿 Estilo general */
 body {
   font-family: 'Georgia', serif;
- background: linear-gradient(to bottom, #fcf8f2, #f7f2e7);
-/* Encabezado */
+  background: linear-gradient(to bottom, #fcf8f2, #f7f2e7);
+  color: #5c4b3c;
+  padding: 30px;
+}
+
 h1 {
   text-align: center;
   font-size: 32px;
@@ -17,7 +19,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Barra de progreso */
 .progreso-container {
   background: #e8d8c4;
   border: 1px solid #c7b299;
@@ -42,7 +43,6 @@ h1 {
   font-weight: bold;
 }
 
-/* Trimestres */
 .trimestre {
   background: #fffdf8;
   border: 2px solid #decbb5;
@@ -51,7 +51,6 @@ h1 {
   margin-bottom: 25px;
 }
 
-/* Materias */
 .asignatura {
   display: block;
   margin: 8px 0;
@@ -62,7 +61,6 @@ h1 {
   font-size: 16px;
 }
 
-/* Materias bloqueadas */
 .bloqueada {
   opacity: 0.5;
   cursor: not-allowed;
@@ -71,7 +69,7 @@ h1 {
   color: #8a7463;
 }
 
-/* 🌸 Colores temáticos */
+/* Colores por categoría */
 .finanzas  { background: #f7f2e7; border-left-color: #c9b89a; }
 .alimentos { background: #e6f7e2; border-left-color: #97cfa3; }
 .idiomas   { background: #eef0fb; border-left-color: #a1a9d3; }
@@ -81,7 +79,6 @@ h1 {
 .general   { background: #f8f3ed; border-left-color: #c0a98f; }
 .pasantia  { background: #f2ecdf; border-left-color: #b1a586; }
 
-/* Pie de página */
 footer {
   text-align: center;
   margin-top: 40px;
@@ -89,33 +86,19 @@ footer {
   font-size: 15px;
   color: #6a4e42;
 }
+
+/* Responsive móvil */
 @media (max-width: 768px) {
   body {
     padding: 15px;
     font-size: 15px;
   }
-
   .progreso-container {
     width: 100%;
     font-size: 14px;
   }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  .trimestre {
-    padding: 12px;
-    margin-bottom: 18px;
-  }
-
-  .asignatura {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  footer {
-    font-size: 13px;
-    margin-top: 30px;
-  }
+  h1 { font-size: 24px; }
+  .trimestre { padding: 12px; margin-bottom: 18px; }
+  .asignatura { font-size: 14px; padding: 8px; }
+  footer { font-size: 13px; margin-top: 30px; }
 }
